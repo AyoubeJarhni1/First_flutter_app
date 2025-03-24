@@ -15,8 +15,8 @@ class Myapp extends StatelessWidget {
         primarySwatch: Colors.deepOrange
       ),
      routes: {
-       "/": (context) => UsersPage(),
-       "/users": (Context) => HomePage()
+       "/users": (context) => UsersPage(),
+       "/": (Context) => HomePage()
      },
     );
   }

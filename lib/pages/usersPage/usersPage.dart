@@ -129,7 +129,7 @@ class _UsersPageState extends State<UsersPage> {
                   if (index == users.length) {
                     return currentPage < totalPages
                         ? Center(child: CircularProgressIndicator())
-                        : SizedBox(); // Cache l'indicateur si toutes les pages sont chargées
+                        : SizedBox();
                   }
                   var user = users[index];
                   return ListTile(
