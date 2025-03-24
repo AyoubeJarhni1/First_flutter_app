@@ -13,7 +13,46 @@ class HomePage extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineLarge,
         ),
       ),
-      drawer: Drawer(),
+      drawer:Drawer(
+        child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+        DrawerHeader(
+        decoration: BoxDecoration(
+        color: Colors.deepOrange,
+        ),
+        child: Text(
+        'Menu',
+        style: TextStyle(
+        color: Colors.white,
+        fontSize: 24,
+        ),
+        ),
+        ),
+        ListTile(
+        leading: Icon(Icons.home),
+        title: Text('Home'),
+        onTap: () {
+        Navigator.pushNamed(context, '/');
+        },
+    ),
+    ListTile(
+    leading: Icon(Icons.account_circle),
+    title: Text('Users Page'),
+    onTap: () {
+    Navigator.pushNamed(context, '/users');
+    },
+    ),
+    ListTile(
+    leading: Icon(Icons.settings),
+    title: Text('Container App'),
+    onTap: () {
+    Navigator.pushNamed(context, '/cont');
+    },
+    ),
+    ],
+    ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center, // Centrer verticalement
         children: [
@@ -28,13 +67,13 @@ class HomePage extends StatelessWidget {
                     color: Colors.grey.withOpacity(0.3),
                     blurRadius: 10,
                     spreadRadius: 2,
-                    offset: Offset(0, 5), // Ombre sous le container
+                    offset: Offset(0, 5),
                   ),
                 ],
               ),
               width: 300, // Largeur du container
               child: Column(
-                mainAxisSize: MainAxisSize.min, // S'adapte au contenu
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   // Image de l'application
                   Image.asset(

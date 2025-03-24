@@ -1,5 +1,6 @@
 import 'package:firstapp/pages/homePages/homePage.dart';
 import 'package:firstapp/pages/usersPage/usersPage.dart';
+import 'package:firstapp/widgets/containerApp.dart';
 import 'package:flutter/material.dart';
 
 void main() =>
@@ -14,10 +15,12 @@ class Myapp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange
       ),
-     routes: {
-       "/users": (context) => UsersPage(),
-       "/": (Context) => HomePage()
-     },
+      // Route initiale
+      routes: {
+        '/': (context) => HomePage(),
+        '/users': (context) => UsersPage(),
+        '/cont': (context) => Containerapp(),
+      },
     );
   }
 }
